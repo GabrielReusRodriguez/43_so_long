@@ -4,3 +4,4 @@ https://harm-smits.github.io/42docs/libs/minilibx/getting_started.html
 
 
 https://reactive.so/post/42-a-comprehensive-guide-to-so_long
+https://03-jon-perez.gitbook.io/coding-library/c/minilibx/eventos

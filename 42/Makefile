@@ -1,11 +1,19 @@
 NAME=so_long
-CFLAGS=-Wall -Wextra -Werror
-CDEBUG = #-g3 -fsanitize=address
+#CDEBUG = -g3 -fsanitize=address
+CDEBUG = -g3
+CFLAGS=-Wall -Wextra -Werror ${CDEBUG}
+
 
 SRC_DIR=./src
 OBJ_DIR=./obj
 
-SRC_FILES=	so_long.c
+SRC_FILES=	so_long.c	\
+			ft_mlx_wrapper_init.c	\
+			ft_mlx_wrapper_destroy.c	\
+			ft_mlx_wrapper_hooks.c	\
+			ft_handler_no_event.c	\
+			ft_handler_keypress.c
+
 UNAME = $(shell uname -s)
 
 ifeq ($(UNAME), Linux)
