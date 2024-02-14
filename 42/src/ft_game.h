@@ -1,23 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_event_handlers.h                                :+:      :+:    :+:   */
+/*   ft_game.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/13 22:27:28 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/02/14 22:15:00 by gabriel          ###   ########.fr       */
+/*   Created: 2024/02/14 21:05:02 by gabriel           #+#    #+#             */
+/*   Updated: 2024/02/14 21:05:58 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_EVENT_HANDLERS_H
-# define FT_EVENT_HANDLERS_H
+#ifndef FT_GAME_H
+# define FT_GAME_H
 
-# include "ft_mlx_wrapper.h"
-
-int	ft_handler_no_event(void *data);
-int	ft_handler_keypress(int keycode, t_mlx *mlx);
-int	ft_handler_destroy(t_mlx *mlx);
-int	ft_handler_render(void * param);
-
+typedef struct s_game
+{
+    unsigned int score;
+    
+}   t_game;
 #endif

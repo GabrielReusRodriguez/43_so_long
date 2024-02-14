@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
+/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 02:14:32 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/02/13 23:27:57 by greus-ro         ###   ########.fr       */
+/*   Updated: 2024/02/14 21:35:53 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,14 +38,14 @@ typedef struct s_data
 
 int	handle_no_event(void *data)
 {
-    data = data;
+	data = data;
 	// This function needs to exist, but it is useless for the moment 
 	return (0);
 }
 
 int	handle_keypress(int keysym, t_data *data)
 {
-    data = data;
+	data = data;
 	if (keysym == XK_Escape)
 		mlx_destroy_window(data->mlx_ptr, data->win_ptr);
 
@@ -55,7 +55,7 @@ int	handle_keypress(int keysym, t_data *data)
 
 int	handle_keyrelease(int keysym, void *data)
 {
-    data = data;
+	data = data;
 	printf("Keyrelease: %d\n", keysym);
 	return (0);
 }
@@ -92,7 +92,7 @@ int	main(void)
 
 int	handle_keypress(int keysym, t_mlx *data)
 {
-    data = data;
+	data = data;
 	if (keysym == XK_Escape)
 		mlx_destroy_window(data->mlx_ptr, data->win_ptr);
 
@@ -102,7 +102,7 @@ int	handle_keypress(int keysym, t_mlx *data)
 
 int	handle_keyrelease(int keysym, void *data)
 {
-    data = data;
+	data = data;
 	printf("Keyrelease: %d\n", keysym);
 	return (0);
 }
@@ -111,31 +111,33 @@ int	handle_keyrelease(int keysym, void *data)
 int main(int argc, char **argv)
 {
 
-    t_mlx   mlx;
+	t_mlx   mlx;
 
-    argc = argc;
-    argv= argv;
+	argc = argc;
+	argv= argv;
 
-    mlx = ft_mlx_new();
-    if (ft_mlx_init(&mlx) == NULL)
-    {
-        ft_mlx_free(&mlx);
-        return (1);
-    }
-    printf("init\n");
-    
-    if (ft_mlx_create_window(&mlx) == NULL)
-    {
-        ft_mlx_free(&mlx);
-        return (1);
-    }
-    printf("new window\n");
-    ft_mlx_hook_functions(&mlx);
-    //mlx_hook(mlx.win_ptr, KeyPress, KeyPressMask, &handle_keypress, &mlx); // ADDED 
+	mlx = ft_mlx_new();
+	if (ft_mlx_init(&mlx) == NULL)
+	{
+		ft_mlx_free(&mlx);
+		return (1);
+	}
+	printf("init\n");
+	
+	if (ft_mlx_create_window(&mlx) == NULL)
+	{
+		ft_mlx_free(&mlx);
+		return (1);
+	}
+	printf("new window\n");
+	ft_mlx_hook_functions(&mlx);
+	//mlx_hook(mlx.win_ptr, KeyPress, KeyPressMask, &handle_keypress, &mlx); // ADDED 
 	//mlx_hook(mlx.win_ptr, KeyRelease, KeyReleaseMask, &handle_keyrelease, &mlx); // CHANGED 
-    mlx_hook(mlx.win_ptr, KeyPress, KeyPressMask, &ft_handler_keypress, &mlx); // ADDED 
-    //mlx_key_hook(mlx.win_ptr, &ft_handler_keypress, &mlx);
-    mlx_loop(mlx.mlx_ptr);
-    ft_mlx_destroy_display(&mlx);
-    return (0);
+	//mlx_key_hook(mlx.win_ptr, &ft_handler_keypress, &mlx);
+
+	//mlx_hook(mlx.win_ptr, KeyPress, KeyPressMask, &ft_handler_keypress, &mlx); // ADDED 
+	printf("JAJAJ\n");
+	mlx_loop(mlx.mlx_ptr);
+	ft_mlx_destroy_display(&mlx);
+	return (0);
 }
