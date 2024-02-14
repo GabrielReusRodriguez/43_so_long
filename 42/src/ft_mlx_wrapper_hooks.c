@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 21:43:42 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/02/14 22:20:29 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/02/14 22:24:58 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ void	ft_mlx_hook_functions(t_mlx *mlx)
 #if OS == Linux 
 	mlx_hook(mlx->win_ptr, KeyPress, KeyPressMask, &ft_handler_keypress, mlx);
 #endif
-
 	mlx_hook(mlx->win_ptr, ON_DESTROY, MLX_DEFAULT_MASK, &ft_handler_destroy, mlx);
 	mlx_loop_hook(mlx->mlx_ptr,&ft_handler_render,mlx);
 }

@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_game.h                                          :+:      :+:    :+:   */
+/*   ft_tile.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/14 21:05:02 by gabriel           #+#    #+#             */
-/*   Updated: 2024/02/14 21:05:58 by gabriel          ###   ########.fr       */
+/*   Created: 2024/02/14 23:51:56 by gabriel           #+#    #+#             */
+/*   Updated: 2024/02/14 23:55:44 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_GAME_H
-# define FT_GAME_H
+#ifndef FT_TILE_H
+# define FT_TILE_H
 
-typedef struct s_game
+typedef struct s_tile
 {
-    unsigned int score;
-    
-}   t_game;
+	void			*tile;
+	unsigned char	type;
+}	t_tile;
+
 #endif

@@ -6,6 +6,7 @@ CFLAGS=-Wall -Wextra -Werror ${CDEBUG}
 
 SRC_DIR=./src
 OBJ_DIR=./obj
+INC_DIR=./inc
 
 SRC_FILES=	so_long.c	\
 			ft_mlx_wrapper_init.c	\
@@ -14,7 +15,9 @@ SRC_FILES=	so_long.c	\
 			ft_handler_no_event.c	\
 			ft_handler_keypress.c	\
 			ft_handler_destroy.c	\
-			ft_handler_render.c
+			ft_handler_render.c		\
+			ft_sprites.c			\
+			ft_map.c
 
 UNAME = $(shell uname -s)
 
@@ -46,7 +49,7 @@ $(NAME): $(OBJ_DIR) $(MLX_LIB) $(OBJ_FILES)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c Makefile
 #	cc $(CFLAGS) -I/usr/include -Imlx_Linux -O3 -c $< -o $@
-	cc $(CFLAGS) ${SO_FLAG} -I/usr/include -I${MLX_DIR} -O3 -c $< -o $@
+	cc $(CFLAGS) ${SO_FLAG} -I/usr/include -I${MLX_DIR} -I${INC_DIR} -O3 -c $< -o $@
 
 $(OBJ_DIR):
 	mkdir -p $(OBJ_DIR)
