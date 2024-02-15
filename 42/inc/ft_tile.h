@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tile.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 23:51:56 by gabriel           #+#    #+#             */
-/*   Updated: 2024/02/14 23:55:44 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/02/15 14:16:24 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ typedef struct s_tile
 {
 	void			*tile;
 	unsigned char	type;
+	unsigned char	status;
 }	t_tile;
+
 
 #endif

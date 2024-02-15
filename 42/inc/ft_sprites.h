@@ -3,15 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sprites.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 22:44:14 by gabriel           #+#    #+#             */
-/*   Updated: 2024/02/14 23:38:42 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/02/15 12:27:46 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_SPRITES_H
 # define FT_SPRITES_H
+
+# include "ft_mlx_wrapper.h"
 
 typedef struct s_sprite
 {
@@ -23,9 +25,7 @@ typedef struct s_sprite
 	void	        *mlx_img;
 }	t_sprite;
 
-# include "ft_mlx_wrapper.h"
-
-t_sprite	*ft_sprite_loader(t_mlx *mlx, char *path, unsigned char type, \
+t_sprite	*ft_sprite_load(t_mlx *mlx, char *path, unsigned char type, \
 				unsigned char status);
 void		ft_sprite_destroy(t_sprite	*sprite);
 void		*ft_sprite_load_all(t_mlx *mlx);

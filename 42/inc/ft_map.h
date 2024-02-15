@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_map.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 23:05:25 by gabriel           #+#    #+#             */
-/*   Updated: 2024/02/14 23:59:44 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/02/15 11:20:08 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ typedef struct s_map
 	unsigned int	height;
 }	t_map;
 
-t_map	*ft_map_load(const char map_name);
+t_map	*ft_map_load(const char *map_name);
 void    ft_map_destroy(t_map *map);
 t_bool	ft_map_validation(t_map *map);
 

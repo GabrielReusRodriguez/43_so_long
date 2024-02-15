@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 02:14:32 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/02/14 21:35:53 by gabriel          ###   ########.fr       */
+/*   Updated: 2024/02/15 12:17:33 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <X11/keysym.h>
 #include "ft_mlx_wrapper.h"
 #include "ft_event_handlers.h"
+#include "ft_game.h"
 
 
 /*
@@ -110,34 +111,34 @@ int	handle_keyrelease(int keysym, void *data)
 
 int main(int argc, char **argv)
 {
-
-	t_mlx   mlx;
+	t_game	game;
 
 	argc = argc;
 	argv= argv;
 
-	mlx = ft_mlx_new();
-	if (ft_mlx_init(&mlx) == NULL)
+	game.mlx = ft_mlx_new();
+	if (ft_mlx_init(&game.mlx) == NULL)
 	{
-		ft_mlx_free(&mlx);
+		ft_mlx_free(&game.mlx);
 		return (1);
 	}
 	printf("init\n");
 	
-	if (ft_mlx_create_window(&mlx) == NULL)
+	if (ft_mlx_create_window(&game.mlx) == NULL)
 	{
-		ft_mlx_free(&mlx);
+		ft_mlx_free(&game.mlx);
 		return (1);
 	}
 	printf("new window\n");
-	ft_mlx_hook_functions(&mlx);
+	ft_mlx_hook_functions(&game);
 	//mlx_hook(mlx.win_ptr, KeyPress, KeyPressMask, &handle_keypress, &mlx); // ADDED 
 	//mlx_hook(mlx.win_ptr, KeyRelease, KeyReleaseMask, &handle_keyrelease, &mlx); // CHANGED 
 	//mlx_key_hook(mlx.win_ptr, &ft_handler_keypress, &mlx);
 
 	//mlx_hook(mlx.win_ptr, KeyPress, KeyPressMask, &ft_handler_keypress, &mlx); // ADDED 
 	printf("JAJAJ\n");
-	mlx_loop(mlx.mlx_ptr);
-	ft_mlx_destroy_display(&mlx);
+	mlx_loop(game.mlx.mlx_ptr);
+	ft_mlx_destroy_display(&game.mlx);
+	ft_game_destroy(&game);
 	return (0);
 }
