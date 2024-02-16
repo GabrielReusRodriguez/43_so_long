@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_mlx_wrapper.h                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: greus-ro <greus-ro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 21:12:03 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/02/15 20:52:58 by greus-ro         ###   ########.fr       */
+/*   Updated: 2024/02/16 00:05:52 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,6 @@
 typedef struct s_game	t_game;
 
 # define MLX_DEFAULT_MASK 0
-
-# ifndef OS 
-#  define OS  Mac
-# endif
 
 typedef struct s_mlx {
 	void	*mlx_ptr;

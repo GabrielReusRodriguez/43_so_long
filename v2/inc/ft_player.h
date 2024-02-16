@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_player.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: greus-ro <greus-ro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 22:30:26 by gabriel           #+#    #+#             */
-/*   Updated: 2024/02/15 18:54:24 by greus-ro         ###   ########.fr       */
+/*   Updated: 2024/02/15 23:57:32 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ typedef struct s_player
 	unsigned char	orientation;
 }   t_player;
 
-t_player    ft_player_create();
+t_player    ft_player_new();
 void        ft_player_destroy(t_player *player);
 
 #endif

@@ -25,16 +25,16 @@ SRC_FILES=	so_long.c	\
 			ft_mlx_wrapper_func.c	\
 			ft_sprites.c			\
 			ft_map.c				\
+			ft_map_validations.c	\
+			ft_map_validations2.c	\
 			ft_game.c				\
 			ft_player.c
 
 UNAME = $(shell uname -s)
 
 ifeq ($(UNAME), Linux)
-#	Properties for Linux
-#	LEAKS =  valgrind --leak-check=full --show-leak-kinds=all -s -q 
 	MLX_DIR=mlx_Linux
-	MLX_LIB=$(MLX_DIR)/libmlx_Linux.a
+	MLX_LIB=mlx_Linux
 	LINK_FLAGS=${CLINUX_FLAGS}
 	SO_FLAG=-D LINUX=1
 endif

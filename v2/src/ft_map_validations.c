@@ -1,37 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_game.h                                          :+:      :+:    :+:   */
+/*   ft_map_validations.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/14 21:05:02 by gabriel           #+#    #+#             */
-/*   Updated: 2024/02/15 23:59:01 by greus-ro         ###   ########.fr       */
+/*   Created: 2024/02/15 22:58:14 by greus-ro          #+#    #+#             */
+/*   Updated: 2024/02/15 23:51:00 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_GAME_H
-# define FT_GAME_H
+#include "ft_map_validations.h"
 
-# include "ft_player.h"
-# include "ft_map.h" 
-# include "ft_mlx_wrapper.h"
-//#include "mlx/mlx.h"
-//# include "mlx.h"
-//# include "ft_sprites.h"
-# include "libft.h"
-
-typedef struct s_game
+t_bool	ft_map_validation(t_map *map)
 {
-	unsigned int 	score;
-	t_player		player;
-	t_map           map;
-	t_mlx			mlx;
-	t_list			*loaded_sprites;
-}   t_game;
+	size_t	i;
+	char	*line;
+	
+	if (map->ber_map == NULL)
+	{
+		return (FALSE);
+	}
+	if (ft_map_is_rectangular(map) == FALSE)
+	{
+		return (FALSE);
+	}
+	if (ft_map_is_min_size(map) == FALSE)
+	{
+		return (FALSE);
+	}
+	if (ft_map_has_all_elements(map) == FALSE)
+	{
+		return (FALSE);
+	}
+	return (TRUE);
+}
 
-t_game  ft_game_new();
-void    ft_game_destroy(t_game  *);
-
-
-#endif

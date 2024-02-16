@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_player.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: greus-ro <greus-ro@student.42.fr>          +#+  +:+       +#+        */
+/*   By: greus-ro <greus-ro@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 13:27:30 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/02/15 18:56:09 by greus-ro         ###   ########.fr       */
+/*   Updated: 2024/02/15 23:57:17 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "ft_player.h"
 
-t_player    ft_player_create()
+t_player    ft_player_new()
 {
 	t_player player;
 
