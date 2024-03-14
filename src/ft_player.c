@@ -6,45 +6,23 @@
 /*   By: greus-ro <greus-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 13:27:30 by greus-ro          #+#    #+#             */
-/*   Updated: 2024/02/15 18:56:09 by greus-ro         ###   ########.fr       */
+/*   Updated: 2024/03/01 17:58:35 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "ft_player.h"
 
-t_player    ft_player_create()
+t_player	ft_player_new(void)
 {
-	t_player player;
+	t_player	player;
 
-	player.sprite_up = NULL;
-	player.sprite_down = NULL;
-	player.sprite_left = NULL;
-	player.sprite_right = NULL;
+	player.position.x = -1;
+	player.position.y = -1;
 	return (player);
 }
 
-void        ft_player_destroy(t_player *player)
+void	ft_player_destroy(t_player *player)
 {
-	if (player->sprite_up != NULL)
-	{
-		free (player->sprite_up);
-		player->sprite_up = NULL;
-	}
-	if (player->sprite_down != NULL)
-	{
-		free (player->sprite_down);
-		player->sprite_down = NULL;
-	}
-	if (player->sprite_left != NULL)
-	{
-		free (player->sprite_left);
-		player->sprite_left = NULL;
-	}
-
-	if (player->sprite_right != NULL)
-	{
-		free (player->sprite_right);
-		player->sprite_right = NULL;
-	}
+	(void)player;
 }

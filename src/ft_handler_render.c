@@ -6,13 +6,12 @@
 /*   By: greus-ro <greus-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 22:12:44 by gabriel           #+#    #+#             */
-/*   Updated: 2024/02/15 18:09:22 by greus-ro         ###   ########.fr       */
+/*   Updated: 2024/03/01 18:40:54 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_handler_render(void * param)
+int	ft_handler_render(void *param)
 {
-	//param = param;
 	(void)param;
 	return (0);
 }

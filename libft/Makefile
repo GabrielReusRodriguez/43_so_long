@@ -6,7 +6,7 @@
 #    By: greus-ro <greus-ro@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/04 01:34:53 by greus-ro          #+#    #+#              #
-#    Updated: 2024/02/15 21:36:10 by greus-ro         ###   ########.fr        #
+#    Updated: 2024/03/03 19:54:52 by greus-ro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,10 +56,11 @@ ${GET_NEXT_BIN_DIR}:
 
 ${PRINTF_BIN_DIR}:
 	mkdir -p ${PRINTF_BIN_DIR}
-#clean:
-#	make clean -C  ${FT_DIR}
-#	make clean -C  ${GET_NEXT_DIR}
-#	make clean -C  ${FT_PRINTF_DIR}
+
+clean:
+	make clean -C  ${FT_DIR}
+	make clean -C  ${GET_NEXT_DIR}
+	make clean -C  ${FT_PRINTF_DIR}
 
 fclean: 
 	make fclean -C  ${FT_DIR}

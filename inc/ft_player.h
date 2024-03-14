@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: greus-ro <greus-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/14 22:30:26 by gabriel           #+#    #+#             */
-/*   Updated: 2024/02/15 18:54:24 by greus-ro         ###   ########.fr       */
+/*   Created: 2024/02/14 22:30:26 by greus-ro          #+#    #+#             */
+/*   Updated: 2024/03/02 20:34:53 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,10 @@
 
 typedef struct s_player
 {
-	t_sprite    	*sprite_up;
-	t_sprite    	*sprite_down;
-	t_sprite    	*sprite_left;
-	t_sprite    	*sprite_right;
-	t_point2d   	position;
-	unsigned char	orientation;
-}   t_player;
+	t_point2d		position;
+}	t_player;
 
-t_player    ft_player_create();
-void        ft_player_destroy(t_player *player);
+t_player	ft_player_new(void);
+void		ft_player_destroy(t_player *player);
 
 #endif

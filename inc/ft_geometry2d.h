@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_geometry2d.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: greus-ro <greus-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/14 22:32:12 by gabriel           #+#    #+#             */
-/*   Updated: 2024/02/14 23:13:58 by gabriel          ###   ########.fr       */
+/*   Created: 2024/02/14 22:32:12 by greus-ro          #+#    #+#             */
+/*   Updated: 2024/03/02 20:34:25 by greus-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,10 @@
 
 typedef struct s_point2d
 {
-	int x;
-	int y;
+	int	x;
+	int	y;
 }	t_point2d;
 
+t_point2d	ft_point2d_new(int x, int y);
 
 #endif
